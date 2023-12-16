@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best proxies and games for school</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Text color */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            overflow: hidden; /* Prevent scrollbars when cursor is near the edge */
+            cursor: none; /* Hide the default cursor */
+        }
+
+        #proxyButton, #gamesButton, #deployButton, #unblockersButton {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            cursor: pointer; /* Restore pointer cursor for buttons */
+        }
+
+        #proxyButton {
+            color: #8a2be2; /* Purple color */
+            background-color: transparent;
+            border: 2px solid #8a2be2; /* Purple border */
+        }
+
+        #proxyButton:hover {
+            background-color: #8a2be2; /* Purple background on hover */
+            color: #ffffff; /* Text color on hover */
+        }
+
+        #gamesButton, #deployButton, #unblockersButton {
+            color: #8a2be2; /* Green color */
+            background-color: transparent;
+            border: 2px solid #8a2be2; /* Green border */
+        }
+
+        #gamesButton:hover, #deployButton:hover, #unblockersButton:hover {
+            background-color: #8a2be2; /* Green background on hover */
+            color: #ffffff; /* Text color on hover */
+        }
+
+        h1 {
+            font-family: 'Rubik Bubbles', sans-serif;
+            font-size: 2em;
+            opacity: 0;
+            animation: slideDown 1s ease forwards;
+        }
+
+        @keyframes slideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add a dot as the cursor */
+        #cursor-dot {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff; /* White color */
+            border-radius: 50%;
+            z-index: 9999; /* Ensure it appears above other elements */
+            pointer-events: none; /* Ensure dot doesn't interfere with button clicks */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Best proxies and games for school</h1>
+        <button id="proxyButton" onclick="redirectTo('proxies')">Proxies</button>
+        <button id="gamesButton" onclick="redirectTo('games')">Games</button>
+        <button id="deployButton" onclick="redirectTo('deploy')">Deploy</button>
+        <button id="unblockersButton" onclick="redirectTo('unblock')">Unblockers</button>
+    </div>
+
+    <div id="cursor-dot"></div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const dot = document.getElementById('cursor-dot');
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+        });
+
+        function redirectTo(path) {
+            window.location.href = `https://matheducation.online/${path}`;
+        }
+    </script>
+</body>
+</html>
